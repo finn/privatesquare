@@ -119,5 +119,9 @@
     $sql = "SELECT * FROM FoursquareUsers";
     backfill_db_users($sql, "sync_user");
 
+    # make sure we end with a newline
+    # (specifically this is to ensure newline after a backfill_tick)
+    echo "\n";
+
     exit();
 ?>
